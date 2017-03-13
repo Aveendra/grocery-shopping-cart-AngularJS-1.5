@@ -1,0 +1,12 @@
+class ProductListService {
+  constructor() {}
+
+  getProductData() {
+    return { "items":[ { "unit_value":"82g Packet", "price":"7", "name":"Maggi", "image":"../../../img\/products\/thumb\/maggi-dev.png", "id":"4", "description":"Devilled Chicken instant noodles", "cart_count":0 }, { "unit_value":"200g Packet", "price":"20", "name":"Harischandra", "image":"../../../img\/products\/thumb\/coffee.png", "id":"5", "description":"Coffee", "cart_count":0 }, { "unit_value":"100g", "price":"5", "name":"Lifebuoy", "image":"../../../img\/products\/thumb\/lifebuoy.png", "id":"6", "description":"Red Total Soap", "cart_count":0 }, { "unit_value":"Packet", "price":"5", "name":"Prima", "image":"../../../img\/products\/thumb\/kottumee.png", "id":"8", "description":"Kottumee Hot & Spicy Noodles", "cart_count":0 }, { "unit_value":"500g Packet", "price":"16", "name":"Prima", "image":"../../../img\/products\/thumb\/bread.png", "id":"9", "description":"Sunrise bread - Normal", "cart_count":0 }, { "unit_value":"150g Pack", "price":"19", "name":"Keells", "image":"../../../img\/products\/thumb\/keels-sausages.png", "id":"10", "description":"Chicken Sausages", "cart_count":0 }, { "unit_value":"6 Pack", "price":"14", "name":"HappyHen", "image":"../../../img\/products\/thumb\/egg.png", "id":"11", "description":"Brown Egg", "cart_count":0 }, { "unit_value":"160g", "price":"12", "name":"Signal", "image":"../../../img\/products\/thumb\/signal.png", "id":"12", "description":"Toothpaste Xl", "cart_count":0 }, { "unit_value":"90g Packet", "price":"6", "name":"LankaSoy", "image":"../../../img\/products\/thumb\/lanka-soy.png", "id":"13", "description":"Soya meat Chicken", "cart_count":0 }, { "unit_value":"190g Packet", "price":"7", "name":"Munchee", "image":"../../../img\/products\/thumb\/cream-cracker.png", "id":"14", "description":"Super cream cracker", "cart_count":0 }, { "unit_value":"1.5 Litre bottle", "price":"19", "name":"Coca-Cola", "image":"../../../img\/products\/thumb\/coke.png", "id":"15", "description":null, "cart_count":0 }, { "unit_value":"1 Litre bottle", "price":"25", "name":"Kist", "image":"../../../img\/products\/thumb\/kist-nectar.png", "id":"16", "description":"Orange & Mango Nectar", "cart_count":0 } ] };
+  }  
+
+}
+
+ProductListService.$inject = [];
+
+export default ProductListService;

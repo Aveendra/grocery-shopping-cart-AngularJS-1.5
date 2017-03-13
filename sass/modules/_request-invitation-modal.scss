@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/*===============================================
+=            Request Invitaion Modal            =
+===============================================*/
+
+#request-invitation{
+	display: none;
+	.cart-modal{
+		padding: 50px 40px;
+		.cart-modal-content{
+			.left-section{
+				float: left;
+				width: 35%;
+				text-align: center;
+				position: relative;
+				height: 100%;
+				.icon{
+					img{
+						width: 130px;
+						max-width: 90%;
+					}
+				}
+			}
+			.right-section{
+				float: left;
+				width: 65%;
+				padding-left: 30px;
+
+				.heading{
+					@extend .left-wide;
+					margin-bottom: 15px;
+				}
+				p{
+					@extend .left-wide;
+					margin-bottom: 20px;
+				}
+				.input-field{
+					@extend .left-wide;
+					margin-bottom: 15px;
+				}
+				.btn{
+					@extend .left-wide;
+				}
+			}
+
+		}
+		@media screen and (max-width: 481px) {
+			.cart-modal-content{
+				.left-section{
+					width: 100%;
+					margin-bottom: 40px;
+					.icon{
+						img{
+							width: 100px;
+						}
+					}
+				}
+				.right-section{
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+		@media screen and (max-width: 376px) {
+			padding: 30px 25px;
+			.cart-modal-content{
+				.left-section{
+					.icon{
+						img{
+							width: 80px;
+						}
+					}
+				}
+				.right-section{}
+			}
+		}
+	}
+}
+
+/*=====  End of Request Invitaion Modal  ======*/

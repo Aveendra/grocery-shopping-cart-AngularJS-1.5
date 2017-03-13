@@ -1,0 +1,24 @@
+<!-- Product Item -->
+<div class="product-itm" ng-class="{'has-added': item.cart_count !== 0}" ng-repeat="item in $ctrl.items">
+    <div class="cart-count" ng-class="{'hide': item.cart_count < 1}">
+        <span>{{item.cart_count}}</span>
+    </div>
+    <div class="product-img"><img src="{{item.image}}"></div>
+    <div class="add-to-cart">
+        <button 
+            class="add btn btn-green" 
+            ng-click="$ctrl.addToCart({id: item.id})"
+            >Add to Cart</button>
+        <button 
+            class="remove btn btn-default"
+            ng-click="$ctrl.removeFromCart({id: item.id, action: 'one'})"
+            ><span class="fa fa-minus"></span></button>
+    </div>
+    <div class="product-data">
+        <div class="small-description">
+        <p>{{item.name}} - {{item.description}}</p>
+        </div>
+        <span class="size">{{item.unit_value}}</span>
+        <span class="price">{{item.price | currency:"AED"}}</span>
+    </div>
+</div><!-- // Product Item -->

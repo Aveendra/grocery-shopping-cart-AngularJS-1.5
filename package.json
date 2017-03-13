@@ -1,0 +1,44 @@
+{
+  "name": "grocery",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "node node_modules/webpack/bin/webpack.js",
+    "test": " [ -f dist/bundle.js ] "
+  },
+  "keywords": [
+    "Angular",
+    "styleguide",
+    "(ES2015)",
+    "Sample",
+    "App",
+    "Todd",
+    "Motto",
+    "ToddMotto"
+  ],
+  "author": "Aveendra Thilakarathna",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^4.0.2",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^5.0.3",
+    "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.3",
+    "ngtemplate-loader": "^1.3.1",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-stream": "^3.1.0"
+  },
+  "dependencies": {
+    "angular-ui-router": "^1.0.0-beta.1",
+    "angular": "^1.5.8"
+  }
+}

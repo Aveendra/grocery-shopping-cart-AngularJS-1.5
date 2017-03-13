@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*=========================================
+=            Invitaiton Notice            =
+=========================================*/
+
+#closed-notice{
+	background: #fff1de;
+	border-bottom: 1px solid #ffe8c8;
+	text-align: center;
+	padding: 12px 0;
+	.col{
+		float: none;
+		margin: auto;
+		span{
+			font-weight: 500;
+		}
+		.btn{
+			margin-left: 15px;
+		}
+	}
+}
+
+/*=====  End of Invitaiton Notice  ======*/

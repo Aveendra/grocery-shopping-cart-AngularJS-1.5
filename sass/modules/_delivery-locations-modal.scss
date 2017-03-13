@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/*===============================================
+=            Request Invitaion Modal            =
+===============================================*/
+
+#delivery-locations{
+	display: none;
+	.cart-modal{
+		padding: 50px 40px;
+		.cart-modal-content{
+			.content{
+				padding: 15px 15px 0;
+			}
+			ul{
+				float: left;
+				padding: 0;
+				margin: 0;
+				float: left;
+				list-style: none;
+				line-height: 2;
+				//font-weight: 500;
+				//color: $green;
+				li{}
+			}
+		}
+		
+		@media screen and (max-width: 580px) {
+			padding: 40px 15px;
+			.cart-modal-content{
+				.content{
+				}
+				ul{
+					float: left;
+					width: 50%;
+					li{}
+				}
+			}
+		}
+		
+		@media screen and (max-width: 376px) {
+			.cart-modal-content{
+				.content{
+				}
+				ul{
+					width: 100%;
+					li{}
+				}
+			}
+		}
+	}
+
+}
+
+/*=====  End of Request Invitaion Modal  ======*/

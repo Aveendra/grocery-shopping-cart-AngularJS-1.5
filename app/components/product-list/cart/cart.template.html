@@ -1,0 +1,72 @@
+<!-- Cart -->
+<section id="cart" >
+
+	<div class="overlay animated" ng-click="$ctrl.openCart()" ng-class="$ctrl.cartOpen ? 'slideInDown' : 'slideOutUp'"></div>
+
+	<div class="cart-inner animated" ng-class="$ctrl.cartOpen ? 'slideInRight' : 'slideOutRight'">
+
+		<!-- Cart Header -->
+		<div class="cart-header">
+			<span class="icon-close" ng-click="$ctrl.openCart()"></span>
+			<span class="title">Your cart</span>
+			<span class="count">3 Items Added</span>
+		</div><!-- // Cart Header -->
+
+		<!-- Cart Product List -->
+		<div class="cart-product-list">
+			<!-- Item -->
+			<div class="cart-itm" ng-repeat="item in $ctrl.cart">
+				<div class="cont">
+
+					<div class="product-data">
+						<span class="img">
+							<img src="{{item.image}}" alt="">
+						</span>
+						<div class="data">
+							<span class="description"><p><span class="name">{{item.name}}</span>{{item.description}}</p></span>
+							<span class="size">{{item.unit_value}}</span>
+						</div>
+					</div>
+
+					<div class="qty">
+						<span class="addmore" ng-click="$ctrl.addToCart({id: item.id})"><i class="fa fa-plus"></i></span>
+						<span class="count"><i>{{item.cart_count}}</i></span>
+						<span class="reduce" ng-click="$ctrl.removeFromCart({id: item.id, action: 'one'})"><i class="fa fa-minus"></i></span>
+					</div>
+					
+					<div class="pricing">
+						<span class="ptotal">{{item.price | currency:"AED"}}</span>
+					</div>
+				</div>
+				<div class="close-btn" ng-click="$ctrl.removeFromCart({id: item.id, action: 'all'})"><i class="icon-close"></i></div>
+			</div><!-- // Item -->
+
+			<!-- Empty Cart placeholder -->
+			<div class="empty-cart-placeholder" ng-class="{'hide': $ctrl.cart.length !== 0}">
+				<span class="icon"><img src="../../../../ico/font-icon/empty-bag.png"></span>
+				<h5 class="title">Looks like your cart is empty</h5>
+				<p>If you want more products to be added<br />when you want to order next time</p>
+				<a href="" class="btn btn-xl btn-green" ng-click="$ctrl.openCart()">Add Products</a>
+			</div><!-- // Empty Cart placeholder -->
+		</div><!-- // Cart Product List -->
+
+		<!-- Cart Footer -->
+		<div class="cart-footer">
+			<!-- Total -->
+			<div class="total">
+				<div class="delivery">
+					<span class="text">Delivery</span>
+					<span class="price green"><span class="strikethrough">AED 10</span> FREE</span>
+				</div>
+				<div class="sub-total">
+					<span class="count">Cart subtotal ({{$ctrl.totalItems}})</span>
+					<span class="price price-total">{{$ctrl.totalPrice | currency:"AED"}}</span>
+				</div>
+			</div><!-- // Total -->
+			<!-- Proceed -->
+			<div class="proceed">
+				<a ui-sref="checkout" class="btn btn-green btn-xl" ng-class="{'btn-disabled': $ctrl.cart.length === 0}">Proceed to Checkout</a>
+			</div><!-- // Proceed -->
+		</div><!-- // Cart Footer -->
+	</div>
+</section><!-- // Cart -->

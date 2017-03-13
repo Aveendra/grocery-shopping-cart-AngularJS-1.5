@@ -1,0 +1,147 @@
+<top-header 
+    total-items="$ctrl.totalItems"
+    total-price="$ctrl.totalPrice"
+    ></top-header>
+
+<!-- Page Content -->
+<section id="page">
+    <div class="page-content container">
+        <div class="row">
+            <!-- Checkout Page -->
+            <div id="checkout-page">
+                
+                <!-- Your Cart -->
+                <div class="your-cart col-md-5">
+
+                    <div class="header">
+                        <h1>Your Cart</h1>
+                        <span class="item-count">
+                           {{$ctrl.totalItems}}  Items Added
+                        </span>
+                        <p>Once you place the order, one of our agents will call and confirm with you.</p>
+                    </div>
+
+                    <!-- Item List -->
+                    <div class="item-list">
+
+                        <div class="empty-cart-placeholder left-panel" ng-class="{'hide' : $ctrl.cart.length !== 0}">
+                            <span class="icon"><img src="../../../ico/font-icon/empty-bag.png"></span>
+                            <h5 class="title">Looks like your cart is empty</h5>
+                            <p>
+                                If you want more products to be added
+                                <br>when you want to order next time
+                            </p>
+                            <a  ui-sref="productlist" class="btn btn-green btn-xl">Add Products</a>
+                        </div>
+
+
+            
+                        <!-- Item -->
+                        <div class="cart-itm" ng-repeat="item in $ctrl.cart">
+                            <div class="cont">
+
+                                <div class="product-data">
+                                    <span class="img">
+                                        <img src="{{item.image}}" alt="">
+                                    </span>
+                                    <div class="data">
+                                        <span class="description"><p><span class="name">{{item.name}}</span>{{item.description}}</p></span>
+                                        <span class="size">{{item.unit_value}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="qty">
+                                    <span class="addmore" ng-click="$ctrl.addToCart($index)"><i class="fa fa-plus"></i></span>
+                                    <span class="count"><i>{{item.cart_count}}</i></span>
+                                    <span class="reduce" ng-click="$ctrl.removeFromCart($index, 'one')"><i class="fa fa-minus"></i></span>
+                                </div>
+                                
+                                <div class="pricing">
+                                    <span class="ptotal">{{item.price | currency:"AED"}}</span>
+                                </div>
+                            </div>
+                            <div class="close-btn" ng-click="$ctrl.removeFromCart($index, 'all')"><i class="icon-close"></i></div>
+                        </div><!-- // Item -->
+
+                    </div><!-- // Item List -->
+
+                    <!-- Cart Footer -->
+                    <div class="cart-footer">
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="delivery">
+                                <span class="text">Delivery</span>
+                                <span class="price green"><span class="strikethrough">AED 10</span> FREE</span>
+                            </div>
+                            <div class="sub-total">
+                                <span class="count">Cart subtotal ({{$ctrl.totalItems}})</span>
+                                <span class="price price-total">{{$ctrl.totalPrice | currency:"AED"}}</span>
+                            </div>
+                        </div><!-- // Total -->
+                    </div><!-- // Cart Footer -->
+                </div><!-- // Your Cart -->
+
+                <!-- Billing -->
+                <div class="billing col-md-7">
+                    <!-- Delivery Banner -->
+                    <div class="delivery-banner">
+                        <span class="icon"><img src="../../../img/delivery-banner-icon.png"></span>
+                        <div class="data">
+                            <h3>Free Delivery. Delivers only around Dubai.</h3>
+                            <p>Currently we deliver only within Dubai <br />and suburbs during the same day of the order.</p>
+                            <a href="#_">Delivery Locations</a>
+                        </div>
+                        <div class="actions">
+                            <a href="#_">Delivery Locations</a>
+                        </div>
+                    </div><!-- // Delivery Banner -->
+
+                    <!-- Delivery Details -->
+                    <div class="delivery-details">
+                        <span class="heading">
+                            Delivery And Personal Details
+                        </span>
+
+                        <form action="" class="form">
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <label class="input-field">
+                                        <span>Delivery Address *</span>
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <label class="input-field">
+                                        <span>Name *</span>
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+                                <div class="col col-md-6">
+                                    <label class="input-field">
+                                        <span>Mobile *</span>
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <br />
+                                    <div class="alert alert-success" role="alert"><span class="icon"><img src="../../../ico/font-icon/wallet.png"></span> You are requested to pay at the point of delivery either by cash or credit / debit card.</div>
+                                </div>
+                            </div>
+                            <div class="row delivery-footer">
+                                <div class="col col-xs-12 col-sm-6 col-md-6">
+                                    <a href="" class="btn btn-green btn-xl">Place your Order</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- // Delivery Details -->
+
+        
+                </div><!-- // Billing -->
+            </div><!-- // Checkout Page -->
+        </div>
+    </div>
+</section><!-- // Page Content -->

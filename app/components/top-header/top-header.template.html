@@ -1,0 +1,28 @@
+<!-- Header -->
+<header id="header">
+    <div class="container">
+    <!-- Logo -->
+    <a href="index.php" id="logo">Grocery</a><!-- // Logo -->
+
+    <!-- Cart Wrap -->
+    <div class="cart-wrap logged-in"> <!-- classes : empty-cart not-logged-in -->
+        <!-- Login -->
+        <a class="login btn btn-sm">
+        <span class="login-txt">Login</span>
+        </a><!-- // Login -->
+
+        <!-- User Name -->
+        <div class="user-name">Hello, <span>Jhon </span></div><!-- // User Name -->
+
+        <!-- Cart -->
+        <div id="cart-checkout" class="cart" ng-click="$ctrl.openCart()">
+            <span class="icon">
+                <span class="icon-cart"></span>
+                <i class="count">{{$ctrl.totalItems}}</i>
+            </span>
+            <span class="total"><span class="price">{{$ctrl.totalPrice | currency:"AED"}}</span></span>
+            <a href="" class="checkout">Checkout</a>
+        </div><!-- // Cart -->
+    </div><!-- // Cart Wrap -->
+    </div>
+</header><!-- // Header -->
